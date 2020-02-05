@@ -1,0 +1,9 @@
+This task does not need to be done in code. This version could have a bit of graphics and sounds in the user-interface, if you want to do that. You can decide to deliver just a mood board to show how you imagine your game GUI to look, when the game is finished.
+If you like, instead you could implement a few social elements, such as gifts or attacks among players (cooperative/competitive play), or perhaps special powers such as the capability of creating new rooms from within the game. 
+To complete this task you need to do the following:
+	deliver just a mood board
+	Or… implement a few social elements, and a more complete gameplay.
+
+While developing your game, you would design some (simple) HTML-based GUI, using javascript. Simple static graphics can be used in the GUIs, for example to show a map of the rooms, or the state of the current room, or perhaps show score/health/energy in a HUD (https://en.wikipedia.org/wiki/Head-up_display_(video_gaming) ).
+ [NOTE: if you have another, potentially very different idea for the tasks, please write a 1-page proposal (like this one) and get it approved (by me), as soon as possible]
+
