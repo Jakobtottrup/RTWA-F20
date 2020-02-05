@@ -41,12 +41,12 @@ While developing your game, you would design some (simple) HTML-based GUI, using
 
 
 
-#Game Design
+# Game Design
 
 The idea for the game, is to have a escaperoom-like game where the player is presented with a view of a room, GUI textboxes displaying hints, interactable objects glowing indicating they are interactable etc. The goal is for the player(s) to escape the room by working together.
 
 
-##Features
+## Features
 
 - 5-10 rooms
   - Each room has an item or object that needs to be interacted with in order to escape
