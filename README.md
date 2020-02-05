@@ -6,10 +6,10 @@ You will start with a single-player, chat-like client-server system, using node.
 The goal of task is mainly to use javascript to create a chat-like game. Libraries like jQuery should be used.
 
 To complete this task you need to do the following:
--	The HTML page containing the game should be loaded from a node.js server. 
--	Some settings and data in the game (such as the initial state of the game or initial player salutation) should be loaded via AJAX from a JSON file on the server.
--	Implement a highscore table in the client, by storing data in local storage. 
--	You will add 3 rooms and provide basic navigation commands to the player, in the client. I.e. the player should start in the “main” room each time the game is loaded, and be able to move from room to room via simple text-based commands. 
+- The HTML page containing the game should be loaded from a node.js server. 
+- Some settings and data in the game (such as the initial state of the game or initial player salutation) should be loaded via AJAX from a JSON file on the server.
+- Implement a highscore table in the client, by storing data in local storage. 
+- You will add 3 rooms and provide basic navigation commands to the player, in the client. I.e. the player should start in the “main” room each time the game is loaded, and be able to move from room to room via simple text-based commands. 
 
 It is not important at this stage that the player’s avatar is able to interact with items or NPCs that might exist in the rooms. 
 
@@ -35,5 +35,6 @@ To complete this task you need to do the following:
 - Or… implement a few social elements, and a more complete gameplay.
 
 While developing your game, you would design some (simple) HTML-based GUI, using javascript. Simple static graphics can be used in the GUIs, for example to show a map of the rooms, or the state of the current room, or perhaps show score/health/energy in a [HUD] (https://en.wikipedia.org/wiki/Head-up_display_(video_gaming))
- [NOTE: if you have another, potentially very different idea for the tasks, please write a 1-page proposal (like this one) and get it approved (by me), as soon as possible]
+
+[**NOTE**: if you have another, potentially very different idea for the tasks, please write a 1-page proposal (like this one) and get it approved (by me), as soon as possible]
 
