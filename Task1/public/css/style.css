@@ -1,0 +1,22 @@
+/*body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}*/
+html,body{
+  height:100%;
+}
+
+.flex-fill {
+  flex:1;
+}
+.chat_area {
+  border: blue 1px solid;
+  height: 300px;
+}
+.nav_links {
+  display: none !important;
+}

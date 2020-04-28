@@ -3,11 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "start http://localhost:3000 && nodemon ./bin/www",
     "postinstall": "npm start"
   },
   "dependencies": {
-    "bootstrap": "^4.4.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
