@@ -20,3 +20,6 @@ html,body{
 .nav_links {
   display: none !important;
 }
+#game_state_json {
+  font-size: 0.7rem;
+}
