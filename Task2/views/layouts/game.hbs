@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head_game}}
+    <title>{{title}}</title>
+</head>
+<body>
+<div class="container-fluid d-flex h-100 flex-column">
+    {{>alert}}
+    <div class="row mx-3">
+        <div class="p-2 col-9">
+            <h1 class="display-1">Room: {{room}}</h1>
+        </div>
+    </div>
+    {{{body}}}
+    {{>chat}}
+</div>
+</body>
+</html>
