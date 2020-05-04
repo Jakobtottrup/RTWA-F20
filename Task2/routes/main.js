@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const title = 'Task 1 - Jatoe13';
+const title = 'Task 2 - Jatoe13';
 const state = require('../gamestate');
-//let gamestate = JSON.parse(JSON.stringify(state));
+
+const connectEnsureLogin = require('connect-ensure-login');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('pages/rooms/main', { title: title, layout: 'layouts/main', room: 'Main', state: state});
@@ -22,5 +23,39 @@ router.get('/B', function(req, res, next) {
 router.get('/C', function(req, res, next) {
   res.render('pages/rooms/c', { title: title, layout: 'layouts/game', room: 'C' });
 });
+/*
+
+router.post('/login', (req, res, next) => {
+  passport.authenticate('local',
+      (err, user, info) => {
+        if (err) {
+          return next(err);
+        }
+
+        if (!user) {
+          return res.redirect('/login?info=' + info);
+        }
+
+        req.logIn(user, (err) => {
+          if (err) {
+            return next(err);
+          }
+          return res.redirect('/');
+        });
+      })(req, res, next);
+});
+
+router.get('/login', (req, res) => {
+  res.render('pages/login');
+});
+
+router.get('/private', connectEnsureLogin.ensureLoggedIn(), (req, res) => {
+  res.render('pages/private');
+});
+
+router.get('/user', connectEnsureLogin.ensureLoggedIn(), (req, res) => {
+  res.send({user: req.user})
+});
+*/
 
 module.exports = router;
