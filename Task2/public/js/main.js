@@ -3,8 +3,16 @@ console.log('main script loaded');
 $.getJSON('/data', (res) => {
     $("#game_state_json").append(JSON.stringify(res, undefined, 2));
 });
+
 $(function () {
     //Variables
+
+    let socket = io();
+    let chat_window = $("#chat_window");
+    let chat_output = $("#output");
+    let chat_input = $("#chat_input");
+    let chat_send = $("#send_message");
+    let user;
     let rnd = Math.floor(Math.random() * 101);
     let settings = {'users': []};
     let sorted_by_score;
@@ -46,6 +54,7 @@ $(function () {
         }
         localStorage.setItem('settings', JSON.stringify(settings));
         console.log(settings);
+        user = usr;
     });
     console.log('rnd value is: ' + rnd);
     localStorage.setItem('settings', JSON.stringify(settings));
@@ -56,6 +65,20 @@ $(function () {
         localStorage.setItem('settings', JSON.stringify(settings));
         location.reload();
     });
+
+    chat_send.click((e) => {
+        e.preventDefault();
+        if (!user) {
+            alert('please enter a username.');
+            return;
+        }
+        socket.emit('chat', {message: chat_input.val(), sender: user});
+    });
+
+    socket.on('chat', (data) => {
+        chat_output.append(`<p><strong>${data.sender}: </strong> ${data.message}</p>`);
+    });
+
 });
 
 

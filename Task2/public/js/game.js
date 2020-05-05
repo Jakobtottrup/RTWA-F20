@@ -1,4 +1,6 @@
 $(() => {
+    $("#chat_area").hide();
+    $("#nav_area").addClass('col-12').removeClass('col-6 border border-dark');
     console.log('game script loaded');
     let rnd = Math.floor(Math.random() * 101);
     let settings = JSON.parse(localStorage.getItem('settings'));

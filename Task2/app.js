@@ -15,13 +15,14 @@ const bodyParser = require('body-parser');
 const connectDB = require('./DB/connection');
 
 
-
 const app = express();
 connectDB();
+
+//const http = require('http').createServer(app);
+//const io = require('socket.io')(http);
 // view engine setup
 
 hbs.registerPartials(__dirname + '/views/partials');
-
 app.set('view engine', 'hbs');
 app.use(express.static(`${__dirname}/public`));
 
@@ -47,15 +48,11 @@ app.use(expressValidator({
         };
     }
 }));
-app.use(logger('dev'));
+//app.use(logger('dev'));
 //app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-app.use('/', mainRouter);
-app.use('/', errorRouter);
-app.use('/users', usersRouter);
 
 
 
@@ -90,6 +87,12 @@ require('./passport')(passport);
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use('/', mainRouter);
+app.use('/users', usersRouter);
+app.use('/', errorRouter);
+/*
 
-
+io.on('connection', (socket) => {
+    console.log('a user connected');
+});*/
 module.exports = app;

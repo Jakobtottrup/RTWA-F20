@@ -13,7 +13,7 @@ html,body{
 .flex-fill {
   flex:1;
 }
-.chat_area {
+.chat_nav_area {
   border: blue 1px solid;
   height: 300px;
 }
