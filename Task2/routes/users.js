@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 let User = require('../DB/models/user');
+let defaultState = require('../gamestate');
 router.get('/register', (req, res) => {
     res.render('pages/register', {layout: 'layouts/user'});
 });
@@ -22,7 +23,8 @@ router.post('/register', ((req, res) => {
     } else {
         let newUser = new User({
             username: username,
-            password: password
+            password: password,
+            gamestate: defaultState
         });
 
         User.findOne({username}, (err, user) => {

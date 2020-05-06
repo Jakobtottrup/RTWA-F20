@@ -1,7 +1,7 @@
 <div class="row mx-3">
     <div class="p-2 col-9">
         <h1 class="display-1">Room: {{room}}</h1>
-        <p>{{username}}</p>
+        <p id="user_hook">Logged in as: {{username}}</p>
     </div>
     <div class="p-2 col-3">
         <p class="lead">Highscores:</p>
@@ -22,15 +22,17 @@
             <tr>
                 <th scope="row">2</th>
                 <td>From</td>
-                <td>Localstorage</td>
+                <td>Localstorage</td>r
             </tr>-->
             </tbody>
         </table>
         <a href="" class="float-right btn btn-danger" id="clear_btn">Clear ALL users</a>
     </div>
-    <div class="col-12 mb-2 ml-0">
-        <input type="text" placeholder="Enter your username..." id="username_input">
+    <div class="col-12 mb-2 ml-0" hidden>
+        <label for="username_input">Change username:</label>
+        <input type="text" value="{{username}}" id="username_input">
         <a href="" class="btn btn-primary" id="username_btn">Enter</a>
-        <a href="/users/logout" class="btn btn-warning">logout</a>
     </div>
+
+    <a href="/users/logout" class="btn btn-warning mb-2 ml-0">logout</a>
 </div>

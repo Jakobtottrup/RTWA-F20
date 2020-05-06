@@ -21,6 +21,9 @@ connectDB();
 //const http = require('http').createServer(app);
 //const io = require('socket.io')(http);
 // view engine setup
+hbs.registerHelper('toJSON', function(obj) {
+    return JSON.stringify(obj, null, 2);
+});
 
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
@@ -86,6 +89,12 @@ require('./passport')(passport);
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.get('*', (req, res, next) => {
+    res.locals.user = req.user || null;
+    //res.locals.gamestate = req.user.gamestate || null;
+    next();
+});
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);

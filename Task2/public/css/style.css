@@ -6,20 +6,23 @@
 a {
   color: #00B7FF;
 }*/
-html,body{
-  height:100%;
+html, body {
+	height : 100%;
 }
 
 .flex-fill {
-  flex:1;
+	flex : 1;
 }
+
 .chat_nav_area {
-  border: blue 1px solid;
-  height: 300px;
+	border : blue 1px solid;
+	height : 300px;
 }
+
 .nav_links {
-  display: none !important;
+	display : none !important;
 }
+
 #game_state_json {
-  font-size: 0.7rem;
+	font-size : 0.7rem;
 }

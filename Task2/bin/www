@@ -6,6 +6,8 @@
 const app = require('../app');
 const debug = require('debug')('task2:server');
 const http = require('http');
+let User = require('../DB/models/user');
+
 
 /**
  * Get port from environment and store in Express.
@@ -30,6 +32,19 @@ io.on('connection', (socket) => {
   socket.on('chat', (data) => {
     console.log(data);
     io.emit('chat', data);
+  });
+
+  socket.on('update_stats', (data) => {
+    const filter = {_id: data._id}
+    const update = {gamestate: data.gamestate}
+    User.update(filter, update)
+        .then(doc => {
+          if (!doc) {
+            console.log('Error updating.');
+          }
+          console.log('Updated user: ' + data.username + " ID: " + data._id);
+        }).catch(err => console.error(err));
+
   });
 });
 /**
