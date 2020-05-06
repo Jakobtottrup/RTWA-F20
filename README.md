@@ -1,7 +1,7 @@
 # RTWA-F20
 Portfolio tasks for Real-Time Web Applications Spring 2020
 ## Installation
-`git clone git@github.com:Jakobtottrup/RTWA-F20.git`  
+`git clone https://github.com/Jakobtottrup/RTWA-F20.git`  
 
 `cd Task1` or `cd Task2` - depending on which task to view
 
