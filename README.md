@@ -1,5 +1,21 @@
 # RTWA-F20
 Portfolio tasks for Real-Time Web Applications Spring 2020
+## Installation
+`git clone git@github.com:Jakobtottrup/RTWA-F20.git`  
+
+`cd Task1` or `cd Task2` - depending on which task to view
+
+`npm install` - postinstall script launches npm start which starts the server and a browsertab at localhost:3000
+
+In case install script fails: 
+
+`nodemon ./bin/www`
+
+[Open localhost in browser](http://localhost:3000)
+
+
+
+`ctrl + c` to kill node process
 
 ## Task 1
 You will start with a single-player, chat-like client-server system, using node.js and javascript.
